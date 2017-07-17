@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>index</title>
+		<script src="https://unpkg.com/vue"></script>
+		<link rel="stylesheet" type="text/css" href="./css/index4.css"/>
+	</head>
+	<body>
+		<div id="app">
+			<!--.lazy change事件后实现数据更新 的 修饰符    不加则实时同步-->
+			<input v-model.lazy="message" placeholder="edit it" />
+			<p>message is: {{message}}</p>
+			<textarea v-model="message"></textarea>
+			<br /><br />
+			<!--多选-->
+			<input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+			<label for="jack">Jack</label>
+			<input type="checkbox" id="john" value="John" v-model="checkedNames">
+			<label for="john">John</label>
+			<input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+			<label for="mike">Mike</label>
+			<br>
+			<span>Checked names: {{ checkedNames }}</span>
+			<br /><br />
+			<!--单选-->
+			<input type="radio" id="one" value="One" v-model="picked">
+			<label for="one">One</label>
+			<br>
+			<input type="radio" id="two" value="Two" v-model="picked">
+			<label for="two">Two</label>
+			<br>
+			<span>Picked: {{ picked }}</span>
+			<br /><br />
+			<!--Select-->
+			<select v-model="selected">
+			    <option disabled value="">请选择</option>
+			    <option>A</option>
+			    <option value="BB">B</option>
+			    <option>C</option>
+			</select>
+			<span>Selected: {{ selected }}</span>
+			<br /><br />
+			<!--多选Select-->
+			<select multiple="multiple" v-model="multipleSelected">
+			    <option disabled value="">请选择</option>
+			    <option>A</option>
+			    <option value="BB">B</option>
+			    <option>C</option>
+			</select>
+			<span>Selected: {{ multipleSelected }}</span>
+			<br /><br />
+			<!--动态渲染-->
+			<select v-model="selected3">
+				<option v-for="option in options" :value="option.value">
+			    {{ option.text }}
+				</option>
+			</select>
+			<span>Selected: {{ selected3 }}</span>
+			
+			
+			
+			
+		</div>
+		
+		<!--
+			.lazy change事件后实现数据更新 的 修饰符    不加则实时同步
+			.trim 自动过滤用户输入的首尾空格
+			.number 如果想自动将用户的输入值转为 Number 类型（如果原值的转换结果为 NaN 则返回原值）
+		-->
+		
+		<script type="text/javascript" src="./js/index4.js"></script>
+	</body>
+</html>

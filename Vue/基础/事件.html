@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>index</title>
+		<script src="https://unpkg.com/vue"></script>
+		<link rel="stylesheet" type="text/css" href="./css/index3.css"/>
+	</head>
+	<body>
+		<div id="app">
+			<button @click="counter += 1">增加 1</button>
+			<p>这个按钮被点击了 {{ counter }} 次。</p>
+			
+			<button @click="greet">点击</button>
+			
+			<button @click.once="warn($event)">Submit</button>
+			<!--.stop阻止单击事件冒泡
+				.prevent
+				.capture
+				.self
+				.once-->
+			<input @keyup.enter="enter">
+			<input @keyup="keyup">
+			<!--.enter
+				.tab
+				.delete (捕获 “删除” 和 “退格” 键)
+				.esc
+				.space
+				.up
+				.down
+				.left
+				.right
+				.ctrl
+				.alt
+				.shift
+				.meta注意：Mac，命令键 (⌘)。Windows，徽标键(⊞)。Sun系统，实心宝石键 (◆)。-->
+			<!-- Ctrl + Click -->
+			<div @click.ctrl="doSomething">Do something</div>
+			
+			<button @mousedown.middle="doSomething">click</button>
+			<!--.left鼠标左键
+				.right鼠标右键
+				.middle鼠标滚轮-->
+		</div>
+		
+		<script type="text/javascript" src="./js/index3.js"></script>
+	</body>
+</html>

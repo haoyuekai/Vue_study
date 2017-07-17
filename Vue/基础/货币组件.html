@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Document</title>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<script src="js/currency-validator.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<currency-input label="Price" v-model="price"></currency-input>
+		  	<currency-input label="Shipping" v-model="shipping"></currency-input>
+		  	<currency-input label="Handling" v-model="handling"></currency-input>
+		  	<currency-input label="Discount" v-model="discount"></currency-input>
+		  
+		  	<p>Total: ${{ total }}</p>
+		</div>
+		
+		<script src="js/index7.js"></script>
+	</body>
+</html>
+

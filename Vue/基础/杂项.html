@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		<div id="app">
+			<my-raw>
+				<p>world world world</p>
+			</my-raw>
+		</div>
+		<script type="text/x-template" id="hello-world-template">
+			<div><p>Hello hello hello</p><slot></slot></div>
+			
+		</script>
+		<script type="text/javascript">
+			
+			var vm = new Vue({
+				el:"#app",
+				data:{
+					
+				},
+				components:{
+					MyRaw:{template: '#hello-world-template'}
+				}
+			})
+		</script>
+	</body>
+</html>

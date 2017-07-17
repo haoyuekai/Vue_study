@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>index</title>
+		<script src="https://unpkg.com/vue"></script>
+		<link rel="stylesheet" type="text/css" href="./css/index6.css"/>
+	</head>
+	<body>
+		<div id="app">
+			<p>{{ total }}</p>
+			<my-row @increments="incrementTotal"></my-row>
+			<my-row @increments="incrementTotal"></my-row>
+			<my-row @increments="incrementTotal"></my-row>
+			<my-row @increments="incrementTotal"></my-row>
+			<my-row @increments="incrementTotal"></my-row>
+			<br><br>
+			<currency-input v-model="price"></currency-input>
+		</div>
+		
+		<script type="text/javascript" src="./js/index6.js"></script>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>index</title>
+		<script src="https://unpkg.com/vue"></script>
+		<style type="text/css">
+			ul{
+				overflow: hidden;
+			}
+			li{
+				cursor: pointer;
+				width: 100px;
+				height: 30px;
+				float: left;
+				margin-right: 5px;
+				background: #00FFFF;
+				list-style: none;
+				text-align: center;
+				line-height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<li v-for="n of lists" @click="tab(n)">{{ n }}</li>
+			</ul>
+			<component :is="currentView">
+				<!-- 组件在 vm.currentview 变化时改变！[home,posts,archive] -->
+				<p>这是{{currentView}}</p>
+				<p>{{currentView}}</p>
+				<p>这是{{currentView}}</p>
+			</component>
+			<keep-alive>
+			  	<component :is="currentView">
+			    	<!-- 非活动组件将被缓存！ -->
+					<p>这是{{currentView}}</p>
+					<p>{{currentView}}</p>
+					<p>这是{{currentView}}</p>
+			  	</component>
+			</keep-alive>
+			<async-example></async-example>
+			
+		</div>
+		
+		<script type="text/javascript">
+			Vue.component('async-example', function (resolve, reject) {
+				
+			  	setTimeout(function () {
+				    // Pass the component definition to the resolve callback
+				    resolve({
+				      	template: '<div>I am async!</div>'
+				    })
+			  	}, 1000)
+			})
+			
+			
+			var vm = new Vue({
+				el:"#app",
+				data:{
+					currentView: 'home',
+					lists:[
+						"home","posts","archive"
+					],
+					children:{
+						"child1":{
+							name:"xiaoli",
+							age:23,
+							sex:"nan"
+						},
+						"child2":{
+							name:"xiaohong",
+							age:22,
+							sex:"nv"
+						},
+						"child3":{
+							name:"xiaoming",
+							age:21,
+							sex:"nan"
+						}
+					}
+						
+				},
+				components: {
+				    home: {template: '<div><p>Welcome home!</p><slot></slot></div>'},
+				    posts: {template: '<div><p>Welcome posts!</p><slot></slot></div>'},
+				    archive: {template: '<div><p>Welcome archive!</p><slot></slot></div>'}
+				},
+				methods:{
+					tab:function(a){
+						this.currentView = a;
+					}
+				}
+			})
+			
+			
+		</script>
+	</body>
+</html>
