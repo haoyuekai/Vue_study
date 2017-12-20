@@ -1,0 +1,48 @@
+[
+	{
+		"img":"./static/img/portait0.jpg",
+		"name":"飞翔的企鹅",
+		"message":"今天下班后一起去打球啊",
+		"messageTime":"上午9:46"
+	},{
+		"img":"./static/img/portait1.jpg",
+		"name":"轮回天生",
+		"message":"一会儿打游戏",
+		"messageTime":"上午9:37"
+	},{
+		"img":"./static/img/portait2.jpg",
+		"name":"vue交流群",
+		"message":"Tom:vue-rource实现前后端交互，体积只有几k，不支持IE9以下。",
+		"messageTime":"上午11:12"
+	},{
+		"img":"./static/img/portait3.jpg",
+		"name":"紫雪飘零",
+		"message":"[分享]火影忍者",
+		"messageTime":"下午2:16"
+	},{
+		"img":"./static/img/portait4.jpg",
+		"name":"随波逐流",
+		"message":"哥们儿，快点上游戏了，就差你一个人了。",
+		"messageTime":"上午11:08"
+	},{
+		"img":"./static/img/portait6.jpg",
+		"name":"暗裔剑魔 亚托克斯",
+		"message":"[分享]火影忍者",
+		"messageTime":"上午9:00"
+	},{
+		"img":"./static/img/portait7.jpg",
+		"name":"飞跃人魔岛",
+		"message":"<font color='#f00'>[新签名]</font>心有猛虎，细嗅蔷薇。",
+		"messageTime":"上午9:46"
+	},{
+		"img":"./static/img/portait8.jpg",
+		"name":"sunnyshare",
+		"message":"吴锦清有点二",
+		"messageTime":"下午3:46"
+	},{
+		"img":"./static/img/portait9.jpg",
+		"name":"心痛的代表",
+		"message":"今天的报表发我一份",
+		"messageTime":"上午10:46"
+	}
+]
